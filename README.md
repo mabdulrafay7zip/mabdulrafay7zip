@@ -65,9 +65,9 @@
 <img src="https://github-readme-stats.vercel.app/api?username=mabdulrafay7zip&show_icons=true&theme=tokyonight" height="165" alt="GitHub Stats"/>
 <img src="https://streak-stats.demolab.com?user=mabdulrafay7zip&theme=tokyonight" height="165" alt="GitHub Streak"/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=mabdulrafay7zip&theme=tokyonight&no-frame=false&row=1" alt="GitHub Trophies"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mabdulrafay7zip&layout=compact&theme=tokyonight&langs_count=8" height="165" alt="Top Languages"/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=mabdulrafay7zip&theme=tokyo-night&hide_border=true" alt="Activity Graph"/>
+<img src="https://github-readme-stats.vercel.app/api?username=mabdulrafay7zip&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" height="165" alt="GitHub Stats All Time"/>
 
 </div>
 
