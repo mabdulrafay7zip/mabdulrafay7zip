@@ -66,7 +66,7 @@
 
 | Project | What it does | 🏆 Best Result |
 |---|---|---|
-| [🎬 Netflix ML Projects — Auspify](https://github.com/mabdulrafay7zip/Auspify_Netflix_ML_Projects) | Recommendation system, content-type prediction, rating classification & K-Means segmentation on 8,790 Netflix titles | **91.9% accuracy** |
+| [🎬 Netflix ML Projects — Auspify](https://github.com/mabdulrafay7zip/Auspify_Netflix_ML_Projects) | Recommendation system, content-type prediction, rating classification & K-Means segmentation on 8,790 Netflix titles — [▶ Live Demo](https://mabdulrafay7zip.github.io/Netflix-Recommender-Live-Demo/) | **91.9% accuracy** |
 | [💳 Credit Scoring Model — CodeAlpha](https://github.com/mabdulrafay7zip/CodeAlpha_CreditScoringModel) | Credit-risk prediction on German Credit data (1,000 applicants) | **75% acc • F1 0.83** |
 | [🩺 Disease Prediction — CodeAlpha](https://github.com/mabdulrafay7zip/CodeAlpha_DiseasePrediction) | Diabetes prediction from Pima health data (768 patients) | **74% accuracy** |
 | [✍️ Handwritten Digit Recognition — CodeAlpha](https://github.com/mabdulrafay7zip/CodeAlpha_HandwrittenCharacterRecognition) | Handwritten digit recognition (1,797 images) — SVM vs MLP vs Logistic Regression | **97.5% accuracy** |
