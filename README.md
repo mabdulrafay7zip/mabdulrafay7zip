@@ -13,7 +13,21 @@
 
 ---
 
+## 🚗 Dream Ride
+
+<div align="center">
+
+![Corolla Grande](https://raw.githubusercontent.com/mabdulrafay7zip/mabdulrafay7zip/main/grande-exit.gif)
+
+*Dream car: Toyota Corolla Grande — one day, In Sha Allah. Code today, cruise tomorrow.* 😄
+
+</div>
+
+
+
 ## 🙋‍♂️ About Me
+
+
 
 - 🎓 BS **Artificial Intelligence** student at **Air University, Islamabad**
 - 💼 **Machine Learning Intern** @ **CodeAlpha** (Sep – Oct 2026) • @ **Auspify Technologies** (Oct – Nov 2026)
