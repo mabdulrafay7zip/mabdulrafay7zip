@@ -87,7 +87,7 @@
 <div align="center">
 
 <a href="https://github.com/mabdulrafay7zip"><img src="https://github-readme-stats.vercel.app/api?username=mabdulrafay7zip&show_icons=true&bg_color=050a18&title_color=d4af37&icon_color=d4af37&text_color=e6e6e6&ring_color=d4af37&border_color=23325e" height="165" alt="GitHub Stats"/></a>
-<a href="https://github.com/mabdulrafay7zip"><img src="https://streak-stats.demolab.com?user=mabdulrafay7zip&background=050a18&ring=d4af37&fire=d4af37&currStreakNum=e9cf7a&sideNums=e9cf7a&currStreakLabel=d4af37&sideLabels=d4af37&dates=8b949e&border=23325e" height="165" alt="GitHub Streak"/></a>
+<a href="https://github.com/mabdulrafay7zip"><img src="./profile/streak.svg" height="165" alt="GitHub Streak"/></a>
 
 <a href="https://github.com/mabdulrafay7zip"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mabdulrafay7zip&layout=compact&langs_count=8&hide=html,css&bg_color=050a18&title_color=d4af37&text_color=e6e6e6&border_color=23325e" height="165" alt="Top Languages"/></a>
 
