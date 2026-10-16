@@ -4,6 +4,7 @@
 
 <a href="https://www.linkedin.com/in/mabdulrafay7"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="mailto:mabdulrafay1134@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://www.youtube.com/@mabdulrafay7zipAI?sub_confirmation=1"><img src="https://img.shields.io/badge/YouTube-Abdul_Rafay_AI-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/></a>
 <img src="https://img.shields.io/badge/Islamabad-Pakistan-2E7D32?style=for-the-badge" alt="Islamabad, Pakistan"/>
 <img src="https://visitor-badge.laobi.icu/badge?page_id=mabdulrafay7zip.mabdulrafay7zip" alt="Profile views"/>
 
