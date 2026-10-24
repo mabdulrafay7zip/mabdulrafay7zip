@@ -80,7 +80,7 @@
 | [🩺 Disease Prediction](https://github.com/mabdulrafay7zip/DiseasePrediction) | Diabetes prediction from Pima health data (768 patients) | **74% accuracy** |
 | [✍️ Handwritten Digit Recognition](https://github.com/mabdulrafay7zip/HandwrittenCharacterRecognition) | Handwritten digit recognition (1,797 images) — SVM vs MLP vs Logistic Regression | **97.5% accuracy** |
 | [🎮 Tetris Game — C++](https://github.com/mabdulrafay7zip/Tetris-Game) | Classic Tetris in the terminal — 7 tetrominoes, rotation, line clears, score & levels | **Playable** 🎮 |
-| [🌐 Personal Portfolio Website](https://mabdulrafay7zip.github.io/) | Animated personal portfolio — typing hero, scroll reveals, project showcase | **Live site** |
+| [🌐 Personal Portfolio Website](https://mabdulrafay7zip.github.io/) | Portfolio Vol. 01 — project showcase, live ML demo & contact | **Live site** |
 
 ## 📊 GitHub Stats
 
