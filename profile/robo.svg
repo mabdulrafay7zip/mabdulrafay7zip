@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="128" viewBox="0 0 120 128" role="img" aria-label="Robo, the watching robot">
+  <title>Robo</title>
+  <!-- antenna -->
+  <line x1="60" y1="20" x2="60" y2="7" stroke="#d4af37" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="60" cy="6" r="4.5" fill="#d4af37">
+    <animate attributeName="opacity" values="1;.35;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- ears -->
+  <rect x="8" y="58" width="10" height="24" rx="5" fill="#d4af37"/>
+  <rect x="102" y="58" width="10" height="24" rx="5" fill="#d4af37"/>
+  <!-- head -->
+  <rect x="18" y="22" width="84" height="76" rx="20" fill="#0b1226" stroke="#d4af37" stroke-width="2"/>
+  <!-- left eye: white + pupil that looks around and blinks (7s loop) -->
+  <ellipse cx="44" cy="56" rx="11" ry="11" fill="#ffffff">
+    <animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.88;.92;.96;1" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="44" cy="56" rx="4.5" ry="4.5" fill="#0b1226">
+    <animate attributeName="cx" values="44;47;47;41;41;44" keyTimes="0;.2;.45;.7;.9;1" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="4.5;4.5;.5;4.5;4.5" keyTimes="0;.88;.92;.96;1" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- right eye -->
+  <ellipse cx="76" cy="56" rx="11" ry="11" fill="#ffffff">
+    <animate attributeName="ry" values="11;11;1;11;11" keyTimes="0;.88;.92;.96;1" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="76" cy="56" rx="4.5" ry="4.5" fill="#0b1226">
+    <animate attributeName="cx" values="76;79;79;73;73;76" keyTimes="0;.2;.45;.7;.9;1" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="4.5;4.5;.5;4.5;4.5" keyTimes="0;.88;.92;.96;1" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- cheeks + smile -->
+  <circle cx="31" cy="74" r="2.5" fill="#d4af37" opacity=".55"/>
+  <circle cx="89" cy="74" r="2.5" fill="#d4af37" opacity=".55"/>
+  <path d="M48 80 Q60 88 72 80" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
