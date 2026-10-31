@@ -37,6 +37,7 @@
 
 🥇 **97.5%** — Digit Recognition (SVM)<br/>
 🎬 **91.9%** — Netflix Type Prediction<br/>
+🤟 **83.7%** — Sign Language (SVM)<br/>
 💳 **75% · F1 0.83** — Credit Scoring<br/>
 📦 **7** end-to-end ML projects<br/>
 🎓 **3** internships completed
@@ -70,6 +71,20 @@
 
 **ML:** Classification • Regression • Clustering (K-Means) • Recommendation Systems • Model Evaluation • Feature Engineering • Data Preprocessing
 
+## 🔬 How I Build Every ML Project
+
+Every project follows the same end-to-end pipeline — no notebook-only demos. Raw data in, evaluated model + plots + reproducible code out.
+
+```mermaid
+flowchart LR
+    A[Raw Data] --> B[Clean + EDA]
+    B --> C[Baseline Model]
+    C --> D[Compare SVM · RF · MLP]
+    D --> E[Tune + Evaluate]
+    E --> F[Plots + Metrics]
+    F --> G[Live Demo + Reproducible Code]
+```
+
 ## 📌 Featured Projects
 
 | Project | What it does | 🏆 Best Result |
@@ -81,6 +96,20 @@
 | [✍️ Handwritten Digit Recognition](https://github.com/mabdulrafay7zip/HandwrittenCharacterRecognition) | Handwritten digit recognition (1,797 images) — SVM vs MLP vs Logistic Regression | **97.5% accuracy** |
 | [🎮 Tetris Game — C++](https://github.com/mabdulrafay7zip/Tetris-Game) | Classic Tetris in the terminal — 7 tetrominoes, rotation, line clears, score & levels | **Playable** 🎮 |
 | [🌐 Personal Portfolio Website](https://mabdulrafay7zip.github.io/) | Portfolio Vol. 01 — project showcase, live ML demo & contact | **Live site** |
+
+## 📸 Results, Not Promises
+
+Real output plots from the repos — every number above is backed by one of these.
+
+| Sign Language: model comparison | Sign Language: live predictions |
+|---|---|
+| <img src="https://raw.githubusercontent.com/mabdulrafay7zip/Sign-Language-Recognition/main/results/accuracy_comparison.png" alt="Sign Language model accuracy comparison"/> | <img src="https://raw.githubusercontent.com/mabdulrafay7zip/Sign-Language-Recognition/main/results/prediction_demo.png" alt="Sign Language predictions on unseen test images"/> |
+| SVM **83.71%** vs Random Forest 82.36% vs MLP 76.80% — 24 ASL letters, 27,455 train images | Predictions on unseen test images |
+
+| Handwritten digits: model comparison | Handwritten digits: sample predictions |
+|---|---|
+| <img src="https://raw.githubusercontent.com/mabdulrafay7zip/HandwrittenCharacterRecognition/main/outputs/model_comparison.png" alt="Handwritten digit model comparison"/> | <img src="https://raw.githubusercontent.com/mabdulrafay7zip/HandwrittenCharacterRecognition/main/outputs/sample_predictions.png" alt="Handwritten digit sample predictions"/> |
+| SVM **97.5%** beats MLP + Logistic Regression — 1,797 images | First 20 test digits, predicted by the MLP |
 
 ## 📊 GitHub Stats
 
@@ -114,6 +143,15 @@
 ![Live Demos](https://img.shields.io/badge/Next-2_More_Live_Demos-14315e?style=for-the-badge)
 
 </div>
+
+## 🚧 Next Up
+
+| Now / Next | What |
+|---|---|
+| 🎓 CS50 AI (Harvard) | Free certificate track — search, learning & neural networks, alongside the semester |
+| 🎬 2 more live demos | Turning existing projects into pages anyone can try, like the Netflix demo |
+| 🧠 Deep Learning + NLP | PyTorch fundamentals, then language models |
+| 🔁 Every day | One genuine improvement to a repo — docs, code or results. No empty commits. |
 
 ## ⚡ Beyond Code
 
