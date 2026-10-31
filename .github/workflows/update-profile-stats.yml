@@ -1,0 +1,32 @@
+name: Update profile stats cards
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # Run every day at 04:00 UTC
+  push:
+    paths:
+      - ".github/workflows/update-profile-stats.yml"
+      - ".github/scripts/generate_stats.py"
+  workflow_dispatch: # Run manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Generate stats cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/generate_stats.py
+
+      - name: Commit stats cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/stats.svg profile/top-langs.svg
+          git commit -m "Update profile stats cards" || exit 0
+          git push
