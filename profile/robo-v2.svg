@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="220" viewBox="0 0 180 220" role="img" aria-label="Robo, the boxy green-headed robot">
+  <title>Robo</title>
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d4ff4f"/>
+      <stop offset=".55" stop-color="#b8f53c"/>
+      <stop offset="1" stop-color="#6f9c1d"/>
+    </linearGradient>
+    <radialGradient id="eye" cx=".38" cy=".32" r=".9">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".7" stop-color="#f2f2f2"/>
+      <stop offset="1" stop-color="#c9c9c9"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-2.5 90 112;2.5 90 112;-2.5 90 112" keyTimes="0;.5;1" dur="6s" repeatCount="indefinite"/>
+    <!-- head: wide rounded cuboid, lime face -->
+    <rect x="15" y="18" width="150" height="96" rx="18" fill="url(#face)" stroke="#eaffb0" stroke-width="2"/>
+    <rect x="118" y="18" width="47" height="96" rx="18" fill="#1c2b12" opacity=".28"/>
+    <!-- side ring detail -->
+    <circle cx="150" cy="66" r="7" fill="none" stroke="#eaffb0" stroke-width="1.6" opacity=".8"/>
+    <!-- eyes: protruding white spheres, no pupils -->
+    <circle cx="58" cy="62" r="17" fill="url(#eye)"/>
+    <circle cx="122" cy="62" r="17" fill="url(#eye)"/>
+    <circle cx="52" cy="55" r="4.5" fill="#ffffff"/>
+    <circle cx="116" cy="55" r="4.5" fill="#ffffff"/>
+    <!-- tapered torso -->
+    <path d="M70 114 L110 114 L97 182 L83 182 Z" fill="#191919"/>
+    <rect x="86" y="118" width="8" height="60" rx="4" fill="#c8ff2e" opacity=".85"/>
+    <!-- feet -->
+    <rect x="76" y="182" width="16" height="10" rx="4" fill="#111111" stroke="#c8ff2e" stroke-width="1"/>
+    <rect x="92" y="182" width="16" height="10" rx="4" fill="#111111" stroke="#c8ff2e" stroke-width="1"/>
+  </g>
+</svg>
