@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Abdul Rafay — Machine Learning Engineer</title>
+<meta name="description" content="Muhammad Abdul Rafay — BS Artificial Intelligence student at Air University, Islamabad. Machine learning, AI applications, data science and web projects with real, measured results. Open to internships, remote-first, worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#23231f; --ink2:#1b1b18; --cream:#f7f2e7; --paper:#fffdf6;
+  --muted:rgba(247,242,231,.62); --muted-d:rgba(35,35,31,.62);
+  --line:rgba(247,242,231,.16); --line-d:rgba(35,35,31,.16);
+  --gold:#c9a227; --lime:#d7ff3e;
+  --blue:#4a7fbf; --charcoal:#2e2e2a; --mint:#a7c6a0; --terra:#c96f4a;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2.5px solid var(--lime);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+section[id]{scroll-margin-top:84px}
+h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
+.eyebrow{font:600 11px 'Inter';letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.eyebrow .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);margin-right:10px;vertical-align:1px}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- top nav ---------- */
+.topnav{position:sticky;top:0;z-index:90;background:rgba(27,27,24,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topnav-in{max-width:1220px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:26px;min-height:60px}
+.brand{font:800 14px 'Archivo';letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.brand em{font-style:normal;color:var(--lime)}
+.navlinks{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;padding:6px 0}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a,.navlinks button{white-space:nowrap;background:none;border:0;cursor:pointer;font:600 12.5px 'Inter';letter-spacing:.04em;color:var(--muted);padding:8px 12px;border-radius:99px;transition:color .25s,background .25s}
+.navlinks a:hover,.navlinks button:hover{color:var(--cream)}
+.navlinks a.active,.navlinks button.active{color:var(--cream);font-weight:700;box-shadow:inset 0 -2px 0 var(--lime)}
+.clock-pill{flex:none;font:600 11.5px 'Inter';letter-spacing:.04em;border:1px solid var(--line);border-radius:99px;padding:8px 14px;white-space:nowrap;background:var(--ink2)}
+.clock-pill b{color:var(--lime);font-weight:700}
+.clock-pill .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--lime);margin-right:7px;vertical-align:1px}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+.hero-eyebrow{font:600 12px 'Inter';letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.hero-eyebrow .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);margin-right:10px;vertical-align:1px}
+.hero h1{font-size:clamp(44px,6.4vw,76px);line-height:1.02;font-weight:900;letter-spacing:-.01em;margin:20px 0 6px}
+.hero h1 .iam{display:block;font-size:.62em;font-weight:800;color:var(--muted);letter-spacing:0;margin-top:10px}
+/* flip pad */
+.flippad{margin-top:18px;perspective:900px;width:min(460px,100%)}
+.flippad-inner{position:relative;background:var(--cream);color:var(--ink);border-radius:14px;padding:30px 28px 26px 28px;box-shadow:0 22px 40px rgba(0,0,0,.4);transform:rotate(2deg);transform-style:preserve-3d;transition:transform .32s var(--ease);cursor:pointer;border:0;width:100%;text-align:left;display:block}
+.flippad-inner.flip{transform:rotate(2deg) rotateX(88deg)}
+.flippad-inner:hover{transform:rotate(2deg) translateY(-3px)}
+.flippad-inner.flip:hover{transform:rotate(2deg) rotateX(88deg)}
+.spiral{position:absolute;top:-9px;left:26px;right:26px;height:18px;background-image:radial-gradient(circle at 9px 9px,#d8d8d8 5.5px,#8f8f8f 6.5px,transparent 7.5px);background-size:26px 18px;background-repeat:repeat-x;pointer-events:none}
+.flippad-role{display:block;font:800 clamp(26px,3.4vw,38px)/1.12 'Archivo';letter-spacing:-.01em;min-height:1.15em}
+.flippad-hint{display:block;margin-top:10px;font:600 10.5px 'Inter';letter-spacing:.2em;text-transform:uppercase;color:var(--muted-d)}
+.hero-sub{margin-top:22px;max-width:520px;font-size:16px;line-height:1.7;color:var(--muted)}
+.hero-sub b{color:var(--cream)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:99px;padding:14px 26px;font:700 13.5px 'Inter';letter-spacing:.02em;cursor:pointer;border:2px solid transparent;transition:transform .2s,background .25s,color .25s}
+.pill:hover{transform:translateY(-2px)}
+.pill.light{background:var(--cream);color:var(--ink)}
+.pill.light:hover{background:var(--lime)}
+.pill.light .arr{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:14px}
+.pill.outline{border-color:rgba(247,242,231,.55);color:var(--cream);background:transparent}
+.pill.outline:hover{border-color:var(--lime);color:var(--lime)}
+/* portrait */
+.portrait{position:relative}
+.portrait img{width:100%;height:min(540px,62vw);object-fit:cover;object-position:top center;border-radius:18px 18px 0 0;display:block;background:#3a3a34}
+.portrait .avail{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--ink);border-radius:99px;padding:9px 16px;font:700 12px 'Inter';letter-spacing:.04em;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.portrait .avail i{width:8px;height:8px;border-radius:50%;background:#2e9e4f;display:block}
+/* marquee */
+.marquee{margin-top:56px;transform:rotate(-1.4deg) scale(1.02);background:var(--ink2);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);overflow:hidden;padding:13px 0}
+.mq-track{display:flex;width:max-content;animation:mq 22s linear infinite;will-change:transform}
+.mq-track span{font:800 13px 'Archivo';letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;padding-right:14px}
+.mq-track .sep{color:var(--lime);padding-right:14px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- doors ---------- */
+.doors-sec{padding:96px 0 8px}
+.doors-head{text-align:center;max-width:720px;margin:0 auto}
+.doors-head h2{font-size:clamp(38px,5.6vw,62px);font-weight:900;line-height:1.05;letter-spacing:-.01em;margin:16px 0 14px}
+.doors-head p{color:var(--muted);font-size:15.5px;line-height:1.7}
+.door-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px;perspective:1200px}
+.door{background:none;border:0;cursor:pointer;padding:0;text-align:center}
+.door .frame{display:block;position:relative;height:380px;border-radius:190px 190px 14px 14px;overflow:hidden;box-shadow:0 24px 44px rgba(0,0,0,.45);border:1px solid rgba(0,0,0,.35)}
+.door .leaf{position:absolute;inset:0;border-radius:inherit;transform-origin:left center;transition:transform .6s var(--ease);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.14) 0 3px,transparent 3px 26px);box-shadow:inset 0 0 0 10px rgba(0,0,0,.18),inset 0 -30px 40px rgba(0,0,0,.25)}
+.door:hover .leaf,.door:focus-visible .leaf{transform:perspective(1000px) rotateY(-18deg)}
+.door.swinging .leaf{transform:perspective(1000px) rotateY(-78deg)}
+.door.blue .leaf{background-color:var(--blue)}
+.door.charcoal .leaf{background-color:#3a3a36}
+.door.mint .leaf{background-color:var(--mint)}
+.door.terra .leaf{background-color:var(--terra)}
+.plate{position:absolute;top:58px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#e6c85a,#c9a227 60%,#a8861d);color:#2a2200;font:800 10px 'Archivo';letter-spacing:.18em;text-transform:uppercase;padding:7px 14px;border-radius:4px;box-shadow:0 3px 8px rgba(0,0,0,.35);white-space:nowrap;z-index:2}
+.handle{position:absolute;right:26px;top:56%;width:14px;height:44px;z-index:2}
+.handle::before{content:"";position:absolute;top:0;left:3px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe98a,#c9a227 70%);box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.handle::after{content:"";position:absolute;top:10px;left:0;width:14px;height:30px;border-radius:7px;background:linear-gradient(90deg,#e6c85a,#a8861d)}
+.keyhole{position:absolute;right:31px;top:calc(56% + 52px);width:7px;height:7px;border-radius:50%;background:#141412;box-shadow:0 0 0 2px rgba(201,162,39,.7);z-index:2}
+.door .dname{display:block;margin-top:18px;font:800 16px 'Archivo';letter-spacing:.05em;text-transform:uppercase}
+.door .dcount{display:block;margin-top:5px;font:500 12px 'Inter';color:var(--muted);letter-spacing:.06em}
+.door .open-hint{margin-top:10px;display:inline-block;font:700 11px 'Inter';letter-spacing:.18em;text-transform:uppercase;color:var(--lime);opacity:0;transition:opacity .25s}
+.door:hover .open-hint,.door:focus-visible .open-hint{opacity:1}
+
+/* door detail */
+.detail{display:none;margin-top:8px}
+.detail.show{display:block}
+.detail-top{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:start}
+.big-door{position:relative;height:400px;border-radius:200px 200px 14px 14px;overflow:hidden;background:#101010;box-shadow:inset 0 0 0 10px rgba(0,0,0,.35),0 24px 44px rgba(0,0,0,.45);border:1px solid rgba(0,0,0,.4)}
+.big-door .inner{position:absolute;inset:26px 26px 26px 64px;border-radius:150px 150px 10px 10px;background:linear-gradient(160deg,#3d3a30,#24221c);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.big-door .inner p{font:800 15px 'Archivo';letter-spacing:.12em;text-transform:uppercase;color:var(--lime);line-height:1.7}
+.big-door .leaf{position:absolute;inset:0;border-radius:inherit;transform-origin:left center;transform:perspective(1000px) rotateY(-62deg);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.14) 0 3px,transparent 3px 26px);box-shadow:inset 0 0 0 10px rgba(0,0,0,.18)}
+.big-door .plate{top:52px}
+.detail h3{font-size:clamp(32px,4.4vw,48px);font-weight:900;line-height:1.05;letter-spacing:-.01em;margin:6px 0 14px}
+.detail .dpara{color:var(--muted);font-size:16px;line-height:1.75;max-width:600px}
+.scope{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;list-style:none;max-width:640px}
+.scope li{font-size:14px;line-height:1.6;color:var(--cream);padding-left:22px;position:relative}
+.scope li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--lime)}
+.back-pill{margin-top:26px}
+.pill.small{padding:10px 20px;font-size:12.5px}
+/* card deck */
+.deck-wrap{margin-top:44px}
+.deck-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.deck-head h4{font:800 13px 'Archivo';letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.deck-nav{display:flex;gap:10px}
+.deck-nav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(247,242,231,.4);background:transparent;cursor:pointer;font-size:18px;color:var(--cream);transition:background .25s,color .25s,transform .2s}
+.deck-nav button:hover{background:var(--lime);color:var(--ink);transform:translateY(-2px)}
+.deck{position:relative;height:380px;margin-top:22px;perspective:1400px;outline-offset:6px}
+.pcard{position:absolute;top:0;left:50%;width:min(560px,92%);margin-left:calc(min(560px,92%)/-2);height:360px;background:var(--paper);color:var(--ink);border-radius:20px;box-shadow:0 26px 50px rgba(0,0,0,.45);padding:30px 30px 24px;display:flex;flex-direction:column;transition:transform .55s var(--ease),opacity .55s var(--ease);overflow:hidden}
+.pcard .tag{font:700 10.5px 'Inter';letter-spacing:.22em;text-transform:uppercase;color:var(--muted-d)}
+.pcard h5{font:800 clamp(24px,3.4vw,32px)/1.12 'Archivo';letter-spacing:-.01em;margin:12px 0 10px}
+.pcard .desc{font-size:14.5px;line-height:1.7;color:var(--muted-d)}
+.pcard .metric{margin-top:16px;font:800 17px 'Archivo';letter-spacing:.02em}
+.pcard .metric small{display:block;font:600 10px 'Inter';letter-spacing:.2em;text-transform:uppercase;color:var(--muted-d);margin-top:4px}
+.pcard .visual{margin-top:auto;padding-top:16px}
+.pcard .links{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.pcard .links a{font:700 12px 'Inter';letter-spacing:.06em;border:2px solid var(--ink);border-radius:99px;padding:10px 18px;transition:background .25s,color .25s}
+.pcard .links a:hover{background:var(--ink);color:var(--cream)}
+.pcard .links a.live{background:var(--ink);color:var(--cream)}
+.pcard .links a.live:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.deck-foot{margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.deck-count{font:600 12px 'Inter';letter-spacing:.2em;color:var(--muted)}
+
+/* ---------- story ---------- */
+.story{padding:110px 0 8px}
+.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.story-left{position:sticky;top:96px}
+.big-year{font:900 clamp(96px,14vw,168px)/0.95 'Archivo';letter-spacing:-.03em;color:var(--cream);margin:18px 0 10px}
+.big-year .yr-note{font:600 12px 'Inter';letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pager{font:600 13px 'Inter';letter-spacing:.24em;color:var(--muted);margin-top:8px}
+.pager b{color:var(--cream)}
+.story-entry h3{font-size:clamp(26px,3.4vw,36px);font-weight:800;line-height:1.15;letter-spacing:-.01em;margin-bottom:12px}
+.story-entry p{color:var(--muted);font-size:16px;line-height:1.75;max-width:520px}
+.story-entry p b{color:var(--cream)}
+.timeline{position:relative;margin-top:34px;padding-left:26px;border-left:2px solid var(--line)}
+.tl-item{padding:0 0 26px;position:relative}
+.tl-item::before{content:"";position:absolute;left:-33px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid var(--lime)}
+.tl-item.now::before{background:var(--lime)}
+.tl-item button{background:none;border:0;cursor:pointer;text-align:left;padding:0;font:700 14px 'Inter';color:var(--muted);letter-spacing:.02em}
+.tl-item.now button{color:var(--cream)}
+.tl-item span{display:block;font:500 12px 'Inter';color:var(--muted);margin-top:3px}
+.next-btn{margin-top:6px;width:64px;height:64px;border-radius:50%;background:var(--cream);color:var(--ink);border:0;cursor:pointer;font-size:22px;box-shadow:0 12px 26px rgba(0,0,0,.35);transition:background .25s,transform .2s}
+.next-btn:hover{background:var(--lime);transform:translateY(-2px)}
+
+/* ---------- contact / footer ---------- */
+.contact{padding:110px 0 0;text-align:center}
+.contact h2{font-size:clamp(42px,7vw,76px);font-weight:900;line-height:1.03;letter-spacing:-.01em;margin:16px 0 0}
+.contact h2 .soft{display:block;color:#b9c9a8;font-weight:800}
+.contact .cbody{max-width:600px;margin:22px auto 0;color:var(--muted);font-size:16px;line-height:1.75}
+.contact .hero-btns{justify-content:center}
+.footer{margin-top:96px;border-top:1px solid var(--line);padding:48px 0 34px;text-align:left}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:32px}
+.foot-grid h4{font:700 11px 'Inter';letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.foot-grid a,.foot-grid p{display:block;font-size:14px;line-height:1.6;color:var(--cream);padding:4px 0}
+.foot-grid a:hover{color:var(--lime)}
+.foot-grid .fname{font:800 17px 'Archivo';letter-spacing:.04em;text-transform:uppercase}
+.foot-grid .fabout{color:var(--muted);font-size:13.5px;max-width:260px}
+.foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.foot-bottom button{background:none;border:0;cursor:pointer;color:var(--cream);font:700 12.5px 'Inter';letter-spacing:.06em}
+.foot-bottom button:hover{color:var(--lime)}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .portrait img{height:420px}
+  .door-row{grid-template-columns:repeat(2,1fr)}
+  .door .frame{height:320px}
+  .detail-top{grid-template-columns:1fr}
+  .big-door{height:320px;max-width:340px}
+  .story-grid{grid-template-columns:1fr;gap:36px}
+  .story-left{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .pcard{height:400px}
+  .deck{height:420px}
+}
+@media(max-width:520px){
+  .door-row{gap:14px}
+  .door .frame{height:250px}
+  .plate{font-size:8.5px;padding:6px 9px;top:44px}
+  .handle{right:18px}
+  .keyhole{right:23px}
+  .scope{grid-template-columns:1fr}
+  .clock-pill .cdate{display:none}
+  .topnav-in{gap:14px}
+  .topnav-in{flex-wrap:wrap;gap:8px 14px;padding:10px 16px}
+  .navlinks{order:3;flex:1 1 100%}
+  .clock-pill{margin-left:auto}
+  .pcard{padding:24px 22px 20px;height:430px}
+  .deck{height:450px}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .mq-track{animation:none}
+  .flippad-inner,.flippad-inner.flip{transition:none}
+  .door .leaf{transition:none}
+  .pcard{transition:none}
+  .deck-nav button,.pill,.next-btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ======= TOP NAV ======= -->
+<header class="topnav">
+  <div class="topnav-in">
+    <a class="brand" href="#home">Muhammad <em>Abdul Rafay</em></a>
+    <nav class="navlinks" aria-label="Sections">
+      <a href="#home" data-nav="home" class="active">Home</a>
+      <button type="button" data-door-link="ml" data-nav="doors">Machine Learning</button>
+      <button type="button" data-door-link="ai" data-nav="doors">AI Applications</button>
+      <button type="button" data-door-link="ds" data-nav="doors">Data Science</button>
+      <button type="button" data-door-link="web" data-nav="doors">Web &amp; Games</button>
+      <a href="#story" data-nav="story">My Story</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <span class="clock-pill" id="clockPill" aria-label="Local time in Pakistan"><span class="live-dot" aria-hidden="true"></span><b>Local time:</b> <span id="clockTime">--:--</span><span class="cdate"> &bull; <span id="clockDate">--</span></span></span>
+  </div>
+</header>
+
+<main>
+<!-- ======= HERO ======= -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow rv"><span class="dot" aria-hidden="true"></span>BS Artificial Intelligence Student</p>
+        <h1 class="rv" style="--d:.08s">Hi, I&rsquo;m Rafay.<span class="iam">I am a</span></h1>
+        <div class="flippad rv" style="--d:.16s">
+          <button type="button" class="flippad-inner" id="flipPad" aria-label="Current role. Activate to see the next role.">
+            <span class="spiral" aria-hidden="true"></span>
+            <span class="flippad-role" id="flipRole">Machine Learning Engineer</span>
+            <span class="flippad-hint">Tap to flip &middot; changes on its own too</span>
+          </button>
+        </div>
+        <p class="hero-sub rv" style="--d:.24s">I build <b>machine learning models</b> and <b>AI applications</b> that work on real data — measured, published on GitHub, and open for anyone to inspect.</p>
+        <div class="hero-btns rv" style="--d:.32s">
+          <a class="pill light" href="mailto:mabdulrafay1134@gmail.com">Get in touch <span class="arr" aria-hidden="true">&rarr;</span></a>
+          <a class="pill outline" href="#doors">See my work</a>
+        </div>
+      </div>
+      <div class="portrait rv" style="--d:.2s">
+        <img src="https://mabdulrafay7zip.github.io/avatar.jpg" alt="Portrait of Muhammad Abdul Rafay" fetchpriority="high">
+        <span class="avail"><i aria-hidden="true"></i>Open to internships</span>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track" id="mqTrack">
+      <span>Open to internships <i class="sep">&bull;</i> Remote-first, worldwide <i class="sep">&bull;</i> Scroll to explore &darr; <i class="sep">&bull;</i>&nbsp;</span>
+      <span>Open to internships <i class="sep">&bull;</i> Remote-first, worldwide <i class="sep">&bull;</i> Scroll to explore &darr; <i class="sep">&bull;</i>&nbsp;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= DOORS ======= -->
+<section class="doors-sec wrap" id="doors">
+  <div class="doors-head rv">
+    <p class="eyebrow"><span class="dot" aria-hidden="true"></span>My Work</p>
+    <h2>Magic happens behind the doors</h2>
+    <p>Four kinds of work, four doors. Open one to see what is inside — the projects, the tools, and the numbers behind each one.</p>
+  </div>
+
+  <div class="door-row" id="doorRow" role="group" aria-label="Work categories">
+    <button type="button" class="door blue rv" style="--d:.05s" data-door="ml">
+      <span class="frame"><span class="leaf" aria-hidden="true"></span><span class="plate">Machine Learning</span><span class="handle" aria-hidden="true"></span><span class="keyhole" aria-hidden="true"></span></span>
+      <span class="dname">Machine Learning</span>
+      <span class="dcount">2 projects</span><br>
+      <span class="open-hint">Open the door &rarr;</span>
+    </button>
+    <button type="button" class="door charcoal rv" style="--d:.12s" data-door="ai">
+      <span class="frame"><span class="leaf" aria-hidden="true"></span><span class="plate">AI Applications</span><span class="handle" aria-hidden="true"></span><span class="keyhole" aria-hidden="true"></span></span>
+      <span class="dname">AI Applications</span>
+      <span class="dcount">2 projects</span><br>
+      <span class="open-hint">Open the door &rarr;</span>
+    </button>
+    <button type="button" class="door mint rv" style="--d:.19s" data-door="ds">
+      <span class="frame"><span class="leaf" aria-hidden="true"></span><span class="plate">Data Science</span><span class="handle" aria-hidden="true"></span><span class="keyhole" aria-hidden="true"></span></span>
+      <span class="dname">Data Science</span>
+      <span class="dcount">2 projects</span><br>
+      <span class="open-hint">Open the door &rarr;</span>
+    </button>
+    <button type="button" class="door terra rv" style="--d:.26s" data-door="web">
+      <span class="frame"><span class="leaf" aria-hidden="true"></span><span class="plate">Web &amp; Games</span><span class="handle" aria-hidden="true"></span><span class="keyhole" aria-hidden="true"></span></span>
+      <span class="dname">Web &amp; Games</span>
+      <span class="dcount">1 project</span><br>
+      <span class="open-hint">Open the door &rarr;</span>
+    </button>
+  </div>
+
+  <div class="detail" id="doorDetail" aria-live="polite">
+    <div class="detail-top">
+      <div class="big-door" id="bigDoor" aria-hidden="true">
+        <span class="leaf" id="bigDoorLeaf"></span>
+        <span class="plate" id="bigDoorPlate">Machine Learning</span>
+        <span class="inner"><p id="bigDoorText">Machine<br>Learning</p></span>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span><span id="detailKicker">Behind the door</span></p>
+        <h3 id="detailTitle" tabindex="-1">Machine Learning</h3>
+        <p class="dpara" id="detailPara"></p>
+        <ul class="scope" id="detailScope"></ul>
+        <button type="button" class="pill outline small back-pill" data-back>&larr; Back to the doors</button>
+      </div>
+    </div>
+    <div class="deck-wrap">
+      <div class="deck-head">
+        <h4 id="deckLabel">Projects in this category</h4>
+        <div class="deck-nav">
+          <button type="button" id="deckPrev" aria-label="Previous project">&larr;</button>
+          <button type="button" id="deckNext" aria-label="Next project">&rarr;</button>
+        </div>
+      </div>
+      <div class="deck" id="deck" tabindex="0" aria-label="Project cards. Use left and right arrow keys to move between projects."></div>
+      <div class="deck-foot">
+        <button type="button" class="pill outline small" data-back>&larr; Back to the doors</button>
+        <span class="deck-count" id="deckCount">01 / 02</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= MY STORY ======= -->
+<section class="story wrap" id="story">
+  <div class="story-grid">
+    <div class="story-left rv">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>My Story</p>
+      <div class="big-year"><span id="bigYear">2026</span><div class="yr-note">Where I am now</div></div>
+      <p class="pager"><b id="pagerNow">03</b> / 03</p>
+    </div>
+    <div class="rv" style="--d:.1s">
+      <div class="story-entry">
+        <h3 id="storyHeading">Let&rsquo;s go back in time.</h3>
+        <p id="storyPara">Three years, one direction: from a first-year student curious about AI to someone shipping measured machine learning work in public.</p>
+      </div>
+      <div class="timeline" id="timeline" role="list"></div>
+      <button type="button" class="next-btn" id="storyNext" aria-label="Next story entry">&rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CONTACT / FOOTER ======= -->
+<section class="contact wrap" id="contact">
+  <p class="eyebrow rv"><span class="dot" aria-hidden="true"></span>Available for new work</p>
+  <h2 class="rv" style="--d:.08s">Got a project?<span class="soft">Let&rsquo;s build it together.</span></h2>
+  <p class="cbody rv" style="--d:.16s">I&rsquo;m taking on new internship and project work: machine learning models, data analysis and web demos. Tell me what you&rsquo;re building and I&rsquo;ll get back to you within a day.</p>
+  <div class="hero-btns rv" style="--d:.24s">
+    <a class="pill light" href="mailto:mabdulrafay1134@gmail.com">Send an email <span class="arr" aria-hidden="true">&rarr;</span></a>
+    <a class="pill outline" href="#doors">See my work</a>
+  </div>
+
+  <footer class="footer">
+    <div class="foot-grid">
+      <div>
+        <p class="fname">Muhammad Abdul Rafay</p>
+        <p class="fabout">Machine learning and AI, built in the open from Islamabad, Pakistan — for teams anywhere.</p>
+      </div>
+      <div>
+        <h4>Work</h4>
+        <a href="#doors" data-door-link="ml">Machine Learning</a>
+        <a href="#doors" data-door-link="ai">AI Applications</a>
+        <a href="#doors" data-door-link="ds">Data Science</a>
+        <a href="#doors" data-door-link="web">Web &amp; Games</a>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="#home">Home</a>
+        <a href="#story">My Story</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/mabdulrafay7zip" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/mabdulrafay7" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div>
+        <h4>Status</h4>
+        <p>Open to internships</p>
+        <p>Remote-first, worldwide</p>
+        <p>Local time: <span id="footClock">--:--</span></p>
+        <p><a href="mailto:mabdulrafay1134@gmail.com">mabdulrafay1134@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Muhammad Abdul Rafay. Designed and built by Rafay.</span>
+      <span>Privacy &amp; credits: no tracking, no cookies.</span>
+      <button type="button" id="toTop">Back to top &uarr;</button>
+    </div>
+  </footer>
+</section>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- live Asia/Karachi clock ---------- */
+  var timeEl = document.getElementById("clockTime"),
+      dateEl = document.getElementById("clockDate"),
+      footEl = document.getElementById("footClock");
+  function fmtParts(d){
+    var p = new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Karachi",hour:"numeric",minute:"2-digit",second:"2-digit",hour12:true,day:"numeric",month:"long",year:"numeric"}).formatToParts(d);
+    var o = {};
+    p.forEach(function(x){ o[x.type] = x.value; });
+    return o;
+  }
+  function tick(){
+    var o = fmtParts(new Date());
+    var t = o.hour + ":" + o.minute + ":" + o.second + (o.dayPeriod || "").toLowerCase();
+    if (timeEl) timeEl.textContent = t;
+    if (dateEl) dateEl.textContent = o.day + " " + o.month + ", " + o.year;
+    if (footEl) footEl.textContent = t + " PKT";
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ---------- flip pad ---------- */
+  var ROLES = ["Machine Learning Engineer","AI Developer","Data Scientist","Python Developer"];
+  var roleEl = document.getElementById("flipRole"),
+      pad = document.getElementById("flipPad"),
+      ri = 0, flipTimer = null;
+  function showRole(i){
+    ri = (i + ROLES.length) % ROLES.length;
+    if (RM) { roleEl.textContent = ROLES[ri]; return; }
+    pad.classList.add("flip");
+    setTimeout(function(){
+      roleEl.textContent = ROLES[ri];
+      pad.classList.remove("flip");
+    }, 300);
+  }
+  function nextRole(){ showRole(ri + 1); }
+  function restartFlip(){
+    if (flipTimer) clearInterval(flipTimer);
+    if (!RM) flipTimer = setInterval(nextRole, 3400);
+  }
+  pad.addEventListener("click", function(){ nextRole(); restartFlip(); });
+  restartFlip();
+
+  /* ---------- doors + project decks ---------- */
+  var DOORS = {
+    ml: {
+      name: "Machine Learning",
+      kicker: "Behind the blue door",
+      para: "Models trained and tested on real datasets, with the numbers published alongside the code. Classification is where I started — and where my strongest results live.",
+      scope: ["Python and scikit-learn","Classification: SVM, Random Forest","Feature extraction and preprocessing","Measured accuracy on held-out test data"],
+      projects: [
+        { tag: "Computer Vision · SVM", title: "Sign Language Recognition",
+          desc: "Recognises 24 American Sign Language letters from hand images. Trained on Sign Language MNIST and compared SVM, Random Forest and MLP side by side — SVM won.",
+          metric: "83.7% test accuracy", metricNote: "SVM · Best of three models",
+          gh: "https://github.com/mabdulrafay7zip/Sign-Language-Recognition", demo: null },
+        { tag: "Handwriting · SVM", title: "Handwritten Character Recognition",
+          desc: "Reads handwritten characters and classifies them, with careful preprocessing and feature extraction to stay robust across very different handwriting styles.",
+          metric: "97.5% accuracy", metricNote: "Best model result",
+          gh: "https://github.com/mabdulrafay7zip/HandwrittenCharacterRecognition", demo: null }
+      ]
+    },
+    ai: {
+      name: "AI Applications",
+      kicker: "Behind the charcoal door",
+      para: "AI you can actually use: a recommender that runs live in the browser, and a study assistant that answers only from your own notes — with the source shown for every answer.",
+      scope: ["TF-IDF and cosine similarity","Retrieval-augmented generation (RAG)","Sentence-transformer embeddings, offline TF-IDF fallback","Streamlit and live web demos"],
+      projects: [
+        { tag: "Recommender · TF-IDF", title: "Netflix Recommender",
+          desc: "A full machine learning suite over 8,790 Netflix titles: a TF-IDF recommendation engine, content-type prediction, rating classification and K-Means clustering — with a live demo in the browser.",
+          metric: "91.9% content-type accuracy", metricNote: "Random Forest · 8,790 titles",
+          gh: "https://github.com/mabdulrafay7zip/Netflix_ML_Projects",
+          demo: "https://mabdulrafay7zip.github.io/Netflix-Recommender-Live-Demo/",
+          demoRepo: "https://github.com/mabdulrafay7zip/Netflix-Recommender-Live-Demo" },
+        { tag: "RAG Study Assistant", title: "StudyMate-AI",
+          desc: "Ask questions over your own study material — PDF, text or markdown notes — and get answers built only from your document, with the exact source chunks shown under every answer. No paid APIs, no API keys.",
+          metric: "Answers from your own notes", metricNote: "Embeddings + offline TF-IDF fallback",
+          gh: "https://github.com/mabdulrafay7zip/StudyMate-AI", demo: null }
+      ]
+    },
+    ds: {
+      name: "Data Science",
+      kicker: "Behind the mint door",
+      para: "Data analysed end to end: cleaning, modelling, comparing classifiers, and saying plainly which features mattered. Both projects report honest, held-out numbers.",
+      scope: ["Python, pandas and NumPy","Random Forest and SVM, compared","Feature analysis and interpretation","Classification on real-world tabular data"],
+      projects: [
+        { tag: "Risk Scoring · Random Forest", title: "Credit Scoring Model",
+          desc: "Predicts loan default risk from applicant data. Tuned to catch risky applicants without unfairly rejecting good ones, and evaluated with both accuracy and F1.",
+          metric: "F1 0.83 · Accuracy 0.75", metricNote: "Random Forest classifier",
+          gh: "https://github.com/mabdulrafay7zip/CreditScoringModel", demo: null },
+        { tag: "Healthcare ML", title: "Disease Prediction",
+          desc: "Early diabetes risk prediction comparing Random Forest and SVM classifiers on clinical data, with feature analysis showing which health indicators matter most.",
+          metric: "74.0% accuracy", metricNote: "Best model · Clinical data",
+          gh: "https://github.com/mabdulrafay7zip/DiseasePrediction", demo: null }
+      ]
+    },
+    web: {
+      name: "Web & Games",
+      kicker: "Behind the terracotta door",
+      para: "Things people can click and play: a game built from scratch in C++, and websites — including this portfolio and the live Netflix demo — built with plain HTML, CSS and JavaScript.",
+      scope: ["C++ game loop, scoring and levels","HTML, CSS and JavaScript","Live demos deployed on GitHub Pages","Git and GitHub, in the open"],
+      projects: [
+        { tag: "Game · C++", title: "Tetris Game",
+          desc: "The classic block-stacking game, built entirely from scratch in C++ — full game loop, line clearing, scoring and progressive levels. The project where my programming journey really began.",
+          metric: "Built from scratch", metricNote: "C++ · Game loop and OOP",
+          gh: "https://github.com/mabdulrafay7zip/tetris-game", demo: null }
+      ]
+    }
+  };
+  var DOOR_COLORS = { ml: "#4a7fbf", ai: "#3a3a36", ds: "#a7c6a0", web: "#c96f4a" };
+
+  var doorRow = document.getElementById("doorRow"),
+      detail = document.getElementById("doorDetail"),
+      deck = document.getElementById("deck"),
+      deckCount = document.getElementById("deckCount"),
+      currentDoor = null, cards = [], activeIdx = 0;
+
+  function visualSVG(tag){
+    var marks = {
+      "Computer Vision · SVM": '<text x="50%" y="58%" text-anchor="middle" font-size="52" font-family="Archivo,sans-serif" font-weight="900" fill="#23231f">A B C</text><text x="50%" y="82%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">24 SIGNS · SCANNED</text>',
+      "Handwriting · SVM": '<text x="50%" y="62%" text-anchor="middle" font-size="58" font-family="Archivo,sans-serif" font-weight="900" fill="#23231f">Aa 7 Q</text><text x="50%" y="84%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">HANDWRITTEN · READ</text>',
+      "Recommender · TF-IDF": '<rect x="18%" y="30%" width="56%" height="12" fill="#23231f"/><rect x="18%" y="48%" width="40%" height="12" fill="#c9a227"/><rect x="18%" y="66%" width="48%" height="12" fill="#23231f" opacity=".45"/><text x="50%" y="88%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">8,790 TITLES RANKED</text>',
+      "RAG Study Assistant": '<rect x="30%" y="22%" width="40%" height="52" rx="4" fill="#fffdf6" stroke="#23231f" stroke-width="2"/><line x1="36%" y1="34%" x2="64%" y2="34%" stroke="#23231f" stroke-width="3"/><line x1="36%" y1="46%" x2="64%" y2="46%" stroke="#23231f" stroke-width="3"/><line x1="36%" y1="58%" x2="56%" y2="58%" stroke="#c9a227" stroke-width="3"/><text x="50%" y="90%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">ASK YOUR OWN NOTES</text>',
+      "Risk Scoring · Random Forest": '<path d="M20 78 A 70 70 0 0 1 180 78" fill="none" stroke="#c9a227" stroke-width="10"/><circle cx="100" cy="78" r="5" fill="#23231f"/><line x1="100" y1="78" x2="138" y2="42" stroke="#23231f" stroke-width="4"/><text x="50%" y="96%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">RISK, SCORED</text>',
+      "Healthcare ML": '<polyline points="10,55 45,55 58,30 72,74 84,55 190,55" fill="none" stroke="#2e9e4f" stroke-width="4"/><text x="50%" y="92%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">EARLY SIGNALS, COMPARED</text>',
+      "Game · C++": '<rect x="32%" y="26%" width="16" height="16" fill="#d7ff3e" stroke="#23231f"/><rect x="42%" y="26%" width="16" height="16" fill="#23231f"/><rect x="42%" y="38%" width="16" height="16" fill="#c9a227" stroke="#23231f"/><rect x="52%" y="38%" width="16" height="16" fill="#23231f"/><rect x="32%" y="62%" width="68" height="10" fill="#23231f" opacity=".2"/><text x="50%" y="90%" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6a675c">LINES CLEARED · LEVELS UP</text>'
+    };
+    var inner = marks[tag] || "";
+    return '<svg viewBox="0 0 200 110" width="100%" height="86" role="img" aria-hidden="true" style="display:block">' + inner + "</svg>";
+  }
+
+  function renderDeck(doorKey){
+    var list = DOORS[doorKey].projects;
+    deck.innerHTML = "";
+    cards = list.map(function(p, i){
+      var el = document.createElement("article");
+      el.className = "pcard";
+      el.setAttribute("aria-hidden", i === 0 ? "false" : "true");
+      var links = '<a href="' + p.gh + '" target="_blank" rel="noopener">GitHub repo &nearr;</a>';
+      if (p.demo) links += '<a class="live" href="' + p.demo + '" target="_blank" rel="noopener">Live demo &nearr;</a>';
+      if (p.demoRepo) links += '<a href="' + p.demoRepo + '" target="_blank" rel="noopener">Demo code &nearr;</a>';
+      el.innerHTML = '<p class="tag">' + p.tag + '</p><h5>' + p.title + '</h5><p class="desc">' + p.desc + '</p>' +
+        '<p class="metric">' + p.metric + '<small>' + p.metricNote + '</small></p>' +
+        '<div class="visual">' + visualSVG(p.tag) + '</div>' +
+        '<div class="links">' + links + '</div>';
+      deck.appendChild(el);
+      return el;
+    });
+    activeIdx = 0;
+    layoutDeck();
+  }
+  function layoutDeck(){
+    cards.forEach(function(el, i){
+      var off = i - activeIdx;
+      var ao = Math.min(Math.abs(off), 2);
+      el.style.transform = "translateX(" + (off * 52) + "%) rotate(" + (off * -6) + "deg) scale(" + (1 - ao * 0.09) + ")";
+      el.style.zIndex = String(10 - ao);
+      el.style.opacity = ao >= 2 ? "0" : "1";
+      el.style.pointerEvents = off === 0 ? "auto" : "none";
+      el.setAttribute("aria-hidden", off === 0 ? "false" : "true");
+    });
+    var n = cards.length;
+    deckCount.textContent = "0" + (activeIdx + 1) + " / 0" + n;
+    document.getElementById("deckLabel").textContent = "Projects in this category — " + (activeIdx + 1) + " of " + n;
+  }
+  function stepDeck(d){
+    if (!cards.length) return;
+    activeIdx = (activeIdx + d + cards.length) % cards.length;
+    layoutDeck();
+  }
+  document.getElementById("deckPrev").addEventListener("click", function(){ stepDeck(-1); });
+  document.getElementById("deckNext").addEventListener("click", function(){ stepDeck(1); });
+  deck.addEventListener("keydown", function(e){
+    if (e.key === "ArrowLeft") { e.preventDefault(); stepDeck(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); stepDeck(1); }
+  });
+
+  function openDoor(key, btn){
+    var d = DOORS[key];
+    currentDoor = key;
+    function show(){
+      document.getElementById("detailKicker").textContent = d.kicker;
+      document.getElementById("detailTitle").textContent = d.name;
+      document.getElementById("detailPara").textContent = d.para;
+      document.getElementById("detailScope").innerHTML = d.scope.map(function(s){ return "<li>" + s + "</li>"; }).join("");
+      document.getElementById("bigDoorPlate").textContent = d.name;
+      document.getElementById("bigDoorText").innerHTML = d.name.replace(" ", "<br>");
+      document.getElementById("bigDoorLeaf").style.backgroundColor = DOOR_COLORS[key];
+      renderDeck(key);
+      doorRow.style.display = "none";
+      detail.classList.add("show");
+      document.getElementById("detailTitle").focus({ preventScroll: true });
+      document.getElementById("doors").scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "start" });
+    }
+    if (btn && !RM) {
+      btn.classList.add("swinging");
+      setTimeout(function(){ btn.classList.remove("swinging"); show(); }, 580);
+    } else { show(); }
+  }
+  function closeDoors(){
+    detail.classList.remove("show");
+    doorRow.style.display = "";
+    currentDoor = null;
+    document.getElementById("doors").scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "start" });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-door]"), function(btn){
+    btn.addEventListener("click", function(){ openDoor(btn.getAttribute("data-door"), btn); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-back]"), function(btn){
+    btn.addEventListener("click", closeDoors);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-door-link]"), function(el){
+    el.addEventListener("click", function(){
+      var key = el.getAttribute("data-door-link");
+      setTimeout(function(){
+        var btn = document.querySelector('[data-door="' + key + '"]');
+        openDoor(key, btn);
+      }, 60);
+    });
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && currentDoor) closeDoors();
+  });
+
+  /* ---------- story timeline ---------- */
+  var STORY = [
+    { year: "2024", title: "Starting out", label: "Started university",
+      para: "Started the BS Artificial Intelligence degree at <b>Air University, Islamabad</b> — and began learning Python properly, from the ground up." },
+    { year: "2025", title: "First real ML work", label: "Internships and first projects",
+      para: "Completed <b>machine learning internships</b> and published my first ML projects on GitHub — models with real datasets and honest, measured results." },
+    { year: "2026", title: "Shipping in public", label: "Seven projects, daily streak",
+      para: "<b>Seven ML projects live</b> on GitHub, a daily contribution streak kept alive, and this portfolio rebuilt to show the work as it deserves to be shown." }
+  ];
+  var si = 2,
+      yearEl = document.getElementById("bigYear"),
+      pagerEl = document.getElementById("pagerNow"),
+      headEl = document.getElementById("storyHeading"),
+      paraEl = document.getElementById("storyPara"),
+      tlEl = document.getElementById("timeline");
+  function renderTimeline(){
+    tlEl.innerHTML = "";
+    STORY.forEach(function(s, i){
+      var item = document.createElement("div");
+      item.className = "tl-item" + (i === si ? " now" : "");
+      item.setAttribute("role", "listitem");
+      var b = document.createElement("button");
+      b.type = "button";
+      b.innerHTML = s.year + " — " + s.label;
+      b.setAttribute("aria-current", i === si ? "true" : "false");
+      b.addEventListener("click", function(){ showStory(i); });
+      item.appendChild(b);
+      var sp = document.createElement("span");
+      sp.textContent = s.title;
+      item.appendChild(sp);
+      tlEl.appendChild(item);
+    });
+  }
+  function showStory(i){
+    si = (i + STORY.length) % STORY.length;
+    yearEl.textContent = STORY[si].year;
+    pagerEl.textContent = "0" + (si + 1);
+    headEl.textContent = STORY[si].title + ".";
+    paraEl.innerHTML = STORY[si].para;
+    renderTimeline();
+  }
+  document.getElementById("storyNext").addEventListener("click", function(){ showStory(si + 1); });
+  renderTimeline();
+
+  /* ---------- scroll reveal ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rv").forEach(function(el){
+    if (RM) { el.classList.add("in"); } else { io.observe(el); }
+  });
+
+  /* ---------- active nav link ---------- */
+  var navMap = {};
+  document.querySelectorAll("[data-nav]").forEach(function(el){ navMap[el.getAttribute("data-nav")] = el; });
+  var secIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var id = en.target.id;
+      Object.keys(navMap).forEach(function(k){ navMap[k].classList.toggle("active", k === id); });
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  ["home","doors","story","contact"].forEach(function(id){
+    var s = document.getElementById(id);
+    if (s) secIO.observe(s);
+  });
+
+  /* ---------- back to top ---------- */
+  document.getElementById("toTop").addEventListener("click", function(){
+    window.scrollTo({ top: 0, behavior: RM ? "auto" : "smooth" });
+  });
+})();
+</script>
+</body>
+</html>
